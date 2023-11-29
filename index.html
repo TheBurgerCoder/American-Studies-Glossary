@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic Website</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <style>
+            html {
+                background-color: #ffdddd;
+                color: #000000;
+                font-family: sans-serif;
+                text-align: center;
+            }
+            body {
+                background-color: #ff3333;
+                color: #000000;
+                font-family: sans-serif;
+                text-align: center;
+                margin:5px;
+                border: solid black, 0px;
+                border-radius: 10px;
+                height: calc(100vha - 10px);
+            }
+
+            h1 {
+                color: #000000;
+                padding: 20px;
+                margin: 0;
+            }
+
+            label {
+                color: #000000;
+            }
+
+            input[type="text"],
+            textarea {
+                padding: 5px;
+                margin: 10px;
+                border: none;
+                border-radius: 5px;
+            }
+
+            input[type="text"] {
+                background-color: #ffffff;
+            }
+
+            select {
+                padding: 5px;
+                margin: 10px;
+                border: none;
+                border-radius: 5px;
+                background-color: #ffffff;
+            }
+
+            button {
+                padding: 10px 20px;
+                margin: 10px;
+                border: none;
+                border-radius: 5px;
+                background-color: #000000;
+                color: #ffffff;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #777777;
+            }
+
+            #wordList {
+                margin: 20px auto;
+                max-width: 500px;
+                background-color: #000000;
+                color: #ffffff;
+                padding: 10px;
+                border-radius: 5px;
+                height:100px;
+                overflow:  scroll;
+            }
+
+            #wordListInput {
+                margin: 10px;
+                padding: 5px;
+                width: 300px;
+            }
+
+            textarea {
+                resize: none;
+            }
+        </style>
+        <h1>Word Definitions</h1>
+
+        <div>
+            <label for="search">Search:</label>
+            <input
+                type="text"
+                id="search"
+                placeholder="Type a word to search" />
+        </div>
+
+        <div>
+            <label for="startWith">Starts with:</label>
+            <select id="startWith">
+                <option value=""></option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+                <option value="G">G</option>
+                <option value="H">H</option>
+                <option value="I">I</option>
+                <option value="J">J</option>
+                <option value="K">K</option>
+                <option value="L">L</option>
+                <option value="M">M</option>
+                <option value="N">N</option>
+                <option value="O">O</option>
+                <option value="P">P</option>
+                <option value="Q">Q</option>
+                <option value="R">R</option>
+                <option value="S">S</option>
+                <option value="T">T</option>
+                <option value="U">U</option>
+                <option value="V">V</option>
+                <option value="W">W</option>
+                <option value="X">X</option>
+                <option value="Y">Y</option>
+                <option value="Z">Z</option>
+            </select>
+        </div>
+
+        <div>
+            <button onclick="sortAlphabetically()">Sort Alphabetically</button>
+            <button onclick="showAll()">Show All</button>
+        </div>
+
+        <div id="wordList">
+            <!-- Word list will be displayed here -->
+        </div>
+        <div>
+            <textarea
+                id="wordListInput"
+                rows="6"
+                cols="30"
+                placeholder="Enter words, each on a new line"></textarea
+            ><br />
+            <button onclick="addWordDefinitions()">Add Definitions</button>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
